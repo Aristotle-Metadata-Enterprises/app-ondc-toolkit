@@ -1,0 +1,78 @@
+# What version of the manifest spec are we using
+manifest = "v1.0"
+
+[ app ]
+# The section that desccribes the overall app
+
+# The name of the app
+# 11179: App: Name, Text
+name = "ONDC Toolkit"
+# A brief, plain text description of what the app does
+# 11179: App: Description, Text
+summary = "Does cool ONDC stuff"
+# A longer *markdown* description of what the app does
+# 11179: App: Description, Markdown
+description = """
+This is a *really* cool app for ONDC stuff
+"""
+# A cover image for the app
+image = "my-image-link.jpg"
+# An optional reference to a git(hub|lab) repository where the source is hosted
+# 11179: App: Source Code Location, URL
+github = "https://github/somewhere"
+# A brief description of the author - a person or a company 
+# 11179: App: Author, Text - similar to Person: Name, Text and Company: Name, Text
+author = "Aristotle Metadata"
+# Date the app was last updated
+# 11179: App: Updated Date, ISO Date Stamp
+last_updated = 2023-03-27
+
+
+[ permissions ]
+# The section that describes what permissions the app needs
+# At the moment, this is just a description. In v2.0 we can add fine grained permissions
+
+# A brief, plain text summary of what permissions and API endpoints are required
+# 11179: App: Permissions Summary, Text
+summary = ""
+
+[ entrypoints ]
+# A list of configurations required by the app
+# This includes
+# * Data customisations, such as custom fields or relationships
+# * User Interface customisations, such as action bar entries, create page entries, 
+
+# A list of custom fields required for the app. It is recommended, but not required, that system names be namespaced
+# 11179: App: Required fields, JSON Dictionary
+custom_fields = [
+        {
+            "name":"ondc:classification",
+            "choices": "OFFICIAL, PROTECTED, SECRET"
+        }
+    ]
+
+user_interface_hooks = [
+    # A list of extra actions in the item bar
+    "item-action-bar": [
+        {
+            type: "dataset" # (The metadata type name, or "all")
+            label: "Edit ONDC Record"
+            url: "/my-link"
+            fa-icon: "font awesome icon"
+        }
+    ],
+    # A list of extra actions in the create page
+    "creation-page": [
+        {
+            "label": "Create new ONDC Data Inventory record",
+            "url": "/link/to/thing",
+        }
+    ],
+    # A list of extra actions in the browse page
+    "browse": [
+        {
+            "label": "ONDC Data Catalog",
+            "url": "/link/to/thing",
+        }
+    ]
+]
