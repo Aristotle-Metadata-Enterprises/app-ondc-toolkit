@@ -1,0 +1,10 @@
+{
+    "name": "ONDC Toolkit",
+    "description": "Does cool ONDC stuff",
+    "custom-fields": [
+        {
+            "name":"ondc:classification",
+            "choices": "OFFICIAL, PROTECTED, SECRET"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "serve": "webpack-dev-server --config webpack.dev.js --hot",
+    "build:dev": "webpack --config webpack.dev.js --watch",
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint --ext .js,.vue ./src"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack": "^5.75.0"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "axios": "^1.3.3",
+    "commander": "^10.0.0",
+    "eslint": "^8.34.0",
+    "libxmljs": "^0.19.10",
+    "libxslt": "^0.10.1",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "webpack-merge": "^5.8.0",
+    "xmldom": "^0.6.0",
+    "xpath": "0.0.32"
+  }
+}
