@@ -62,7 +62,6 @@ export default {
     refreshTokens: function() {
       this.aristotleApi("/api/jwt/token/refresh/", "post", {"refresh": this.mdr.tokens.refresh}).then(
         response => {
-          console.log("REFRESHEEDEDED")
           this.mdr.tokens.access = response.data.access
           console.log(response.data.access)
           console.log(response)

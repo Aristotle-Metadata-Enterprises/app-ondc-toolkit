@@ -1,13 +1,10 @@
 <template>
   <div class="">
-    <base >
-      <h2>ONDC Data Catalog</h2>
       <button class="pull-right btn btn-primary">Download ONDC Catalog</button>
-      <hr>
-      <hr>
+      <h2>ONDC Data Catalog</h2>
       <hr>
       <ag-grid-vue
-        style="width: 100%; height: 1200px"
+        style="width: 100%; height: 600px"
         class="ag-theme-alpine"
         rowSelection="single"
         :rowData="this.catalog.items"
